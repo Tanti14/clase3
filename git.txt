@@ -1,0 +1,79 @@
+En la clase de hoy vamos a ver Git y Github, su instalacion, para que se usa, como se usa y demas cosas.
+
+Comandos basicos de consola:
+============================
+
+. pwd : para ver donde estoy posicionado, en que carpeta estoy trabajando
+. clear : para borrar la consola y dejarla limpia
+. ls : para listar las cosas que estan dentro de donde estoy parado
+. ls -a : Lista todos los archivos de una carpeta, incluso los archivos ocultos
+. cd (nombre de la carpeta): para ingresar a la carpeta que queremos ingresar
+. cd .. : para salir de la carpeta donde estoy
+. touch (nombre del archivo): para crear un archivo con la extension de lo q se quiera
+. nano (nombre del archivo): ingreso a un editor de texto
+. cat (nombre del archivo): para ver el contenido del archivo
+. rmdir (nombre del archivo): borra la carpeta/directorio que estoy nombrando
+. rm (nombre del archivo) : borra el archivo que estoy nombrando
+. mv (nombre del archivo) (nuevo nombre del archivo) : Nos permite cambiar el nombre de un archivo desde la consola
+  -despues de cambiar el nombre, hay que colocar el siguiente comando:
+   . git add (nombre viejo del archivo) (nombre nuevo del archivo)
+   . despues se hace un commit de manera normal
+
+
+
+
+Comandos principales de GIT:
+============================
+
+. git config --global user.name "nombre" : cambia el nombre de usuario.
+. git config --global user.email "mail" : cambia el mail de usuario.
+. git init : seria para crear el repositorio de la carpeta q quiero que git trabaje.
+. git remote add origin + (link repositorio) : comando para vincular el repositorio local con el repositorio remoto.
+. git add + (nombre de archivo) : comando para pasar un archivo editado a la etapa de stage.
+. git add . : para que todos los archivos editados/untracked sean registrados.
+. git commit -m "mensaje" : comando para actualizar los cambios realizados en los archivos, en el repo local, con un mensaje para indicar que es lo que se modificó.
+. git push --set-upstream origin main : comando para definir en que rama vamos a hacer el push.
+. git push : comando para subir los cambios del repositorio local al repositorio remoto. solo se puede usar este comando luego setear la rama por defecto, usando el comando de arriba.
+
+. git status : ver en que estado esta nuestro proyecto, donde estoy dentro del proyecto
+. git pull : comando para actualizar nuestro repositorio local con los cambios del repositorio remoto. Recomendable usarlo cada vez que estemos por trabajar en un proyecto grupal.
+
+Para trabajar desde otra Rama/Branch:
+=====================================
+
+. git branch + (nombre nueva rama) : comando para crear una nueva rama.
+. git branch : enlista las ramas disponibles y me muestra en que rama de trabajo estoy.
+. git checkout + (nombre de rama) : comando para cambiar de una rama a otra.
+. git pull : comando para actualizar nuestro repositorio local con los cambios del repositorio remoto. Recomendable usarlo cada vez que estemos por trabajar en un proyecto grupal.
+. git add + (nombre de archivo) : comando para pasar un archivo editado a la etapa de stage.
+. git commit -m "mensaje" : comando para actualizar los cambios realizados en los archivos, en el repo local, con un mensaje para indicar que es lo que se modificó.
+. git push --set-upstream origin + (nombre de la rama) : comando para definir en que rama vamos a hacer el push. Se usa solo la primera vez.
+. git push : comando para subir los cambios del repositorio local al repositorio remoto. solo se puede usar este comando luego setear la rama por defecto, usando el comando de arriba.
+
+
+
+Otros comandos de GIT:
+======================
+
+. git commit : para pasar los cambios y guardarlos a la nueva version del proyecto.
+. git commit --amend : me deja agregar cambios al ultimo commit. Es para no hacer muchos commits seguidos si me olvide de algo.
+. git checkout (nombre del commit) : volver temporalemente a una version anterior para saber como estaba. Con el checkput (nombre de la rama) vuelvo a donde quiero ir sin guardar nada.
+
+. git log -p : muestra TODOS los commmits super detallados con las cosas editadas.
+. git log : para ver todos los commits realizados con fecha y autor.
+. git show : muestra los cambios realizados del ultimo commit.
+
+. git reset : es el comando definitivo para volver a una version anterior del proyecto. Se le pueden poner 2 banderas,  --soft (aca va el nombre del commit al que queremos volver) dejando las cosas del staging intactas, pero si hago el --hard (nombre del commit) vuelve TODO borrando lo que hay en el staging.
+. git stash : almacena temporalmente cambios que se hayas efectuado en el código en el que estás trabajando para que puedas trabajar en otra cosa o en otra rama y, más tarde, regresar y volver a aplicar los cambios.
+
+
+
+PASOS PARA CLONAR UN REPOSITORIO:
+=================================
+
+1) Elegir carpeta para descargar el repositorio
+2) Click derecho -> Git Bash here
+3) git init
+4) git clone LINK
+5) git status
+6) copias tus carpetas con las páginas(html, css, js, imágenes, etc) a agregar dentro del directorio del repositorio que está dentro de la carpeta elegida en el paso 1
